@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700;800&display=swap');
+
+:root {
+  --color-bg: #1f2937;
+  --color-box: #273549;
+  --color-primary: #10b981;
+  --color-accent: #4adf86;
+  --color-password: #55f991;
+  --color-text: #ffffff;
+  --color-muted: #d5d4d8;
+  --color-line: #2f3e53;
+
+  --radius-card: 50px;
+  --radius-small: 6px;
+
+  --font-main: 'Karla', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-main);
+  display: grid;
+  place-items: center;
+  background: #f3f4f6;
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  width: 100%;
+  padding: 24px;
+}
+
+.password-card {
+  width: min(100%, 550px);
+  min-height: 550px;
+  margin: 0 auto;
+  padding: 52px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-card);
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0 18px 36px -18px;
+}
+
+.password-card__content {
+  width: 100%;
+}
+
+.password-card__title {
+  max-width: 360px;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.password-card__title span {
+  display: block;
+  color: var(--color-accent);
+}
+
+.password-card__description {
+  margin-top: 10px;
+  font-size: 20px;
+  color: var(--color-muted);
+}
+
+.btn-generate {
+  margin-top: 51px;
+  width: 191px;
+  height: 42px;
+  border: 0;
+  border-radius: var(--radius-small);
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.password-card__button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.password-card__divider {
+  width: 100%;
+  height: 1px;
+  margin-top: 35px;
+  background-color: var(--color-line);
+}
+
+.password-card__choices {
+  margin-top: 35px;
+  display: flex;
+  gap: 24px;
+}
+
+.password-card__choice {
+  width: 100%;
+  min-height: 39px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-small);
+  background-color: var(--color-box);
+  color: var(--color-password);
+  font-size: 16px;
+}
