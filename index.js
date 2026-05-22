@@ -129,5 +129,21 @@ function generatePwd() {
   secondChoice.textContent = generateOnePassword();
 }
 */
+async function copyToClipboard(element) {
+  const text = element.textContent;
+  if (!text) return;
+
+  await navigator.clipboard.writeText(text);
+
+  element.textContent = '✅ Copied!';
+  element.classList.add('copied');
+
+  setTimeout(() => {
+    element.textContent = text;
+    element.classList.remove('copied');
+  }, 1500);
+}
+firstChoice.addEventListener('click', () => copyToClipboard(firstChoice));
+secondChoice.addEventListener('click', () => copyToClipboard(secondChoice));
 
 btnGenerate.addEventListener('click', generatePwd);

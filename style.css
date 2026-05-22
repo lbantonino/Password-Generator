@@ -123,3 +123,12 @@ button {
   color: var(--color-password);
   font-size: 16px;
 }
+
+.password-card__choice {
+  cursor: pointer;
+}
+
+.password-card__choice.copied {
+  outline: 2px solid green;
+  /* ou changer la couleur, ajouter un checkmark, etc. */
+}
